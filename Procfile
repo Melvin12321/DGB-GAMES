@@ -1,1 +1,1 @@
-worker: node bot.js DGB-GAMES
+worker: node bot.js
