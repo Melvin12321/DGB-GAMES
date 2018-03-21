@@ -1,0 +1,14 @@
+{
+  "name": "dgb-games",
+  "version": "1.0.0",
+  "description": "Bot voor DGB-Games",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Melvin",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.3.0"
+  }
+}
