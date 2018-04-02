@@ -163,6 +163,18 @@ if (command === 'clear') {
       message.channel.send('Ik heb ' + fetched.size + ' berichten verwijderd!')
       message.delete();
 }
-
+  
+  if(command === 'say') {
+    if (!message.member.roles.find("name", "BotPerms"))
+      return message.reply(':no_entry: Je hebt geen toegang tot dit commando! :no_entry:');
+    const sayMessage = args.join("  ");
+    const sayEmbed = new Discord.RichEmbed()
+    .setColor(0x0B97DE)
+    .addField("Nieuwe Melding!", sayMessage)
+    .setTimestamp()
+    message.delete().catch(O_o=>{});
+    message.channel.send(sayEmbed)
+}
+  
 });
 client.login(TOKEN);
