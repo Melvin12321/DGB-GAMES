@@ -175,6 +175,18 @@ if (command === 'clear') {
     message.delete().catch(O_o=>{});
     message.channel.send(sayEmbed)
 }
-  
+
+   if(command === 'youtuber_say') {
+    if (!message.member.roles.find("name", "YouTuber"))
+      return message.reply(':no_entry: Je hebt geen toegang tot dit commando! :no_entry:');
+    const sayMessage = args.join("  ");
+    const sayEmbed = new Discord.RichEmbed()
+    .setColor(0x0B97DE)
+    .addField("Nieuwe YouTuber Melding!", sayMessage)
+    .setTimestamp()
+    message.delete().catch(O_o=>{});
+    message.channel.send(sayEmbed)
+} 
+   
 });
 client.login(TOKEN);
