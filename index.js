@@ -49,7 +49,7 @@ if(command === "botinfo") {
     .addField("Gemaakt op:", "24-02-2018")
     .addField("Gemaakt door:", "@Melvin#7592 | @ItsDerpyAron#9620")
     .addField("Prefix:", "/")
-    .addField("Versie:", "1.5.4 [BETA]")
+    .addField("Versie:", "1.5.5 [BETA]")
     .addField("Copyright:", "*DGB-Games© Copyright 2018 - 2019*")
 
     return message.channel.send(embed)
@@ -182,7 +182,7 @@ if (command === 'clear') {
     const sayMessage = args.join("  ");
     const sayEmbed = new Discord.RichEmbed()
     .setColor(0x0B97DE)
-    .addField("Nieuwe YouTuber Melding!", sayMessage)
+    .addField("__**Nieuwe YouTuber Melding!**__", sayMessage)
     .addField("Geschreven door:", `${message.author.username}`)
     .setTimestamp()
     message.delete().catch(O_o=>{});
