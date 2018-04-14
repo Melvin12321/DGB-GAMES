@@ -183,6 +183,7 @@ if (command === 'clear') {
     const sayEmbed = new Discord.RichEmbed()
     .setColor(0x0B97DE)
     .addField("Nieuwe YouTuber Melding!", sayMessage)
+    .addField("Geschreven door:", `${message.author.username}`)
     .setTimestamp()
     message.delete().catch(O_o=>{});
     message.channel.send(sayEmbed)
