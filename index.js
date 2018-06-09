@@ -68,7 +68,6 @@ if(command === "help") {
     .addField(":question: /report", "==========")
     .addField(":hammer: /warn", "==========")
     .addField(":pencil2: /clear", "==========")
-    .addField(":x: /ip", "==========")
     .addField("Copyright:", "*DGB-Games© Copyright 2018 - 2019*")
     .setTimestamp()
 
@@ -138,10 +137,6 @@ if(command === "help") {
     const msg = message.channel.send("https://www.youtube.com/channel/UCDLu_HClTVFhok3XwrO8tHw");
   }
   
-  if(command === 'ip') {
-    const msg = message.channel.send("Het IP van onze server is: dgb_games.aternos.me");
-  }
-
   if(command === 'admin') {
     let adminEmbed = new Discord.RichEmbed()
     .setImage("https://cdn.discordapp.com/attachments/363329115958542336/419796791765237761/dc_1.jpeg")
