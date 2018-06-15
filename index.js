@@ -125,6 +125,25 @@ if(command === "help") {
 
   }
 
+  if(command === 'bug') {
+  let wreason = args.join("  ").slice(22);
+  let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+  if(!rUser) return message.channel.send(":warning: Vul een bug in!");
+
+  let bugEmbed = new Discord.RichEmbed()
+  .setColor("#ff0800")
+  .addField("__**Nieuwe Bug**__", `**Bug**: ${wreason}\n\n Door: ${rUser}`)
+  let logs = message.guild.channels.find(`name`, "bugs");
+  if(!logs) return message.channel.send("Ik kan de logs channel niet vinden.");
+  message.delete()
+
+  message.delete().catch(O_o=>{});
+  const msg = message.channel.send("Bedank, je bug is gemeld!")
+  logs.send(bugEmbed);
+
+  return;
+}
+  
   if(command === "addmod") {
 
     let aUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
