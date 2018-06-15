@@ -126,17 +126,16 @@ if(command === "help") {
 
   }
 
-  if(command === 'bug') {
+if(command === 'bug') {
   let wreason = args.join("  ").slice(22);
   let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
   if(!rUser) return message.channel.send(":warning: Vul een bug in!");
 
   let bugEmbed = new Discord.RichEmbed()
   .setColor("#ff0800")
-  .addField("**Bug**, `${wreason}\n\n Gemeld door: ${rUser}`)
+  .addField("__**Nieuwe Bug**__", `**Bug**: ${wreason}\n\n Bug gemeld door: ${rUser}`)
   let logs = message.guild.channels.find(`name`, "bugs");
   if(!logs) return message.channel.send("Ik kan de logs channel niet vinden.");
-  message.delete()
 
   message.delete().catch(O_o=>{});
   const msg = message.channel.send("Bedank, je bug is gemeld!")
