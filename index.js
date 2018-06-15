@@ -133,7 +133,7 @@ if(command === "help") {
 
   let bugEmbed = new Discord.RichEmbed()
   .setColor("#ff0800")
-  .addField("__**Nieuwe Bug**__", `**Bug**: ${wreason}\n\n Door: ${rUser}`)
+  .addField("**Bug**, `${wreason}\n\n Gemeld door: ${rUser}`)
   let logs = message.guild.channels.find(`name`, "bugs");
   if(!logs) return message.channel.send("Ik kan de logs channel niet vinden.");
   message.delete()
