@@ -24,7 +24,7 @@ client.on("message", async message => {
 
 }
 
-bot.on("guildMemberAdd", async member => {
+client.on("guildMemberAdd", async member => {
   console.log(`${member.id} joined the server.`);
 
   let welcomechannel = member.guild.channels.find(`name`, "welkom");
