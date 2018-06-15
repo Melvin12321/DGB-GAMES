@@ -24,7 +24,7 @@ client.on("message", async message => {
 
 }
 
-bot.on("guildMemberAdd", member => {
+client.on("guildMemberAdd", member => {
   var role = member.guild.roles.find('name', 'Member');
 
   member.addRole(role)
