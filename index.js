@@ -24,12 +24,6 @@ client.on("message", async message => {
 
 }
 
-client.on("guildMemberAdd", async member => {
-  console.log(`${member.id} joined the server.`);
-
-  let welcomechannel = member.guild.channels.find(`name`, "welkom");
-  let welcomechannel.send(`Welkom op de DGB-GAMES Server! ${member}`);
-});  
   
 if(message.content.indexOf(PREFIX) !== 0) return;
 const args = message.content.slice(PREFIX.length).trim().split(/ +/g);
