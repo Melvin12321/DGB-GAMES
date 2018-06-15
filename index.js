@@ -74,6 +74,7 @@ if(command === "help") {
     .addField(":ping_pong: /ping", "==========")
     .addField(":video_camera: /youtube", "==========")
     .addField(":question: /report", "==========")
+    .addField(":pencil: /bug", "==========")
     .addField(":hammer: /warn", "==========")
     .addField(":pencil2: /clear", "==========")
     .addField("Copyright:", "*DGB-Games© Copyright 2018 - 2019*")
