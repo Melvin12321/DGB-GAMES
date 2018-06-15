@@ -24,6 +24,13 @@ client.on("message", async message => {
 
 }
 
+bot.on("guildMemberAdd", member => {
+  var role = member.guild.roles.find('name', 'Member');
+
+  member.addRole(role)
+
+});  
+  
   
 if(message.content.indexOf(PREFIX) !== 0) return;
 const args = message.content.slice(PREFIX.length).trim().split(/ +/g);
