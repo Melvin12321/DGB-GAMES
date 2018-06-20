@@ -99,6 +99,7 @@ if(command === "help") {
     if(!logs) return message.channel.send("Ik kan de logs channel niet vinden.");
 
     message.delete().catch(O_o=>{});
+    const msg = message.channel.send("De gebruiker is met succes gewaarschuwd!")
     logs.send(warnEmbed);
 
     return;
